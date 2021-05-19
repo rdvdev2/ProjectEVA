@@ -1,37 +1,40 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "project-eva",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Project EVA",
+  "description": "Bringing the Evangelion world to Minecraft",
   "authors": [
-    "Me!"
+    "rdvdev2"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "email": "rdvdev2@gmail.com",
+    "homepage": "https://minecraft.curseforge.com/projects/project-eva",
+    "issues": "https://github.com/rdvdev2/ProjectEVA/issues",
+    "sources": "https://github.com/rdvdev2/ProjectEVA"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3.0-only",
+  "icon": "assets/project-eva/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+      {
+        "adapter": "kotlin",
+        "value": "com.rdvdev2.projecteva.Mod"
+      }
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.8.7",
-    "fabric": "*",
+    "minecraft": "~1.16.2",
+    "fabricloader": "*",
     "fabric-language-kotlin": "*",
-    "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "flamingo": "*"
+
+    "fabric-api-base": "*"
   }
 }
